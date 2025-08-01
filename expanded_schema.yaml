@@ -1,0 +1,125 @@
+crm1:
+  primary_key: msisdn
+  foreign_keys: {}
+  columns:
+    msisdn:
+      data_type: object
+      sample_value: 0003c4a6a80456a3331880cb4e2b1402
+      description: The column 'msisdn' in the 'crm1' table represents a unique identifier
+        for mobile subscribers, typically formatted as a string of alphanumeric characters.
+        For example, the sample value '0003c4a6a80456a3331880cb4e2b1402' serves as
+        a distinct reference for tracking customer interactions and services in the
+        CRM system.
+    gender:
+      data_type: object
+      sample_value: Not Available
+      description: The 'gender' column in the 'crm1' table indicates the gender of
+        individuals, with values such as 'Not Available' representing cases where
+        this information is not provided. This helps in understanding demographic
+        coverage and identifying gaps in data collection for better customer insights.
+    year_of_birth:
+      data_type: int64
+      sample_value: '1992'
+      description: The 'year_of_birth' column in the 'crm1' table indicates the birth
+        year of individuals, with a sample value of '1992' representing someone born
+        in that year. This information can help in analyzing demographics and tailoring
+        marketing strategies based on age groups.
+    system_status:
+      data_type: object
+      sample_value: ACTIVE
+      description: The 'system_status' column in the 'crm1' table indicates the current
+        operational state of a system or user account, with values such as 'ACTIVE'
+        representing that the system or account is currently in use and fully operational.
+        Monitoring this status helps ensure effective resource management and user
+        engagement.
+    mobile_type:
+      data_type: object
+      sample_value: Prepaid
+      description: The column 'mobile_type' in the 'crm1' table categorizes customers
+        based on their mobile service plans, with 'Prepaid' indicating that customers
+        pay for their mobile services in advance rather than through a monthly billing
+        cycle. Understanding this distinction helps the business tailor marketing
+        strategies and service offerings to different customer segments.
+    value_segment:
+      data_type: object
+      sample_value: Tier_3
+      description: The 'value_segment' column in the 'crm1' table categorizes customers
+        based on their purchasing behavior and overall value to the business. For
+        example, 'Tier_3' indicates a segment of customers who may have lower spending
+        or engagement compared to higher tiers, helping the business tailor marketing
+        strategies and resources effectively.
+device1:
+  primary_key: null
+  foreign_keys:
+    msisdn: crm1.msisdn
+  columns:
+    msisdn:
+      data_type: object
+      sample_value: bc6f4db505c4fc497b96384c4583e4d1
+      description: The column 'msisdn' in the 'device1' table represents a unique
+        identifier for mobile devices, typically formatted as a hexadecimal string.
+        This identifier is essential for tracking and managing device-specific data
+        within our systems.
+    imei_tac:
+      data_type: object
+      sample_value: ec8d6d1f63ac724f517000ca31b029fc
+      description: The column 'imei_tac' in the 'device1' table represents the Type
+        Allocation Code (TAC) portion of an IMEI number, which uniquely identifies
+        the device model and manufacturer. For example, the sample value 'ec8d6d1f63ac724f517000ca31b029fc'
+        indicates a specific device's identification, crucial for tracking and managing
+        mobile devices in the inventory.
+    brand_name:
+      data_type: object
+      sample_value: OPPO
+      description: The 'brand_name' column in the 'device1' table identifies the manufacturer
+        of each device, with 'OPPO' being one of the entries. This information helps
+        in analyzing market trends and consumer preferences based on brand performance.
+    model_name:
+      data_type: object
+      sample_value: CPH1609
+      description: The 'model_name' column in the 'device1' table represents the specific
+        identifier for each device model, such as 'CPH1609'. This information helps
+        in tracking and managing different device versions for inventory and support
+        purposes.
+    os_name:
+      data_type: object
+      sample_value: Android
+      description: The 'os_name' column in the 'device1' table indicates the operating
+        system of the devices being analyzed. For example, a sample value of 'Android'
+        signifies that the device runs on the Android operating system, which is important
+        for understanding user demographics and optimizing app performance across
+        different platforms.
+    os_vendor:
+      data_type: object
+      sample_value: Google
+      description: The 'os_vendor' column in the 'device1' table identifies the manufacturer
+        of the operating system used on a device, with 'Google' indicating that the
+        device runs on an operating system developed by Google, such as Android. This
+        information is crucial for understanding device compatibility and targeting
+        specific user demographics in marketing strategies.
+rev1:
+  primary_key: null
+  foreign_keys:
+    msisdn: crm1.msisdn
+  columns:
+    msisdn:
+      data_type: object
+      sample_value: N/A
+      description: The column 'msisdn' in the table 'rev1' represents the mobile subscriber
+        integrated services digital network number, which is a unique identifier for
+        mobile phone users. A sample value of 'N/A' indicates that the mobile number
+        is not available or not applicable for certain records.
+    week_number:
+      data_type: object
+      sample_value: N/A
+      description: The 'week_number' column in the 'rev1' table indicates the specific
+        week of the year for each entry, with values ranging from 1 to 52. A sample
+        value of 'N/A' suggests that the week number is not applicable or not available
+        for certain records, which may require further investigation for completeness.
+    revenue_usd:
+      data_type: object
+      sample_value: N/A
+      description: The column 'revenue_usd' in the table 'rev1' represents the total
+        revenue generated in US dollars. A sample value of 'N/A' indicates that revenue
+        data is not available for certain entries, which may require further investigation
+        for accurate financial analysis.
